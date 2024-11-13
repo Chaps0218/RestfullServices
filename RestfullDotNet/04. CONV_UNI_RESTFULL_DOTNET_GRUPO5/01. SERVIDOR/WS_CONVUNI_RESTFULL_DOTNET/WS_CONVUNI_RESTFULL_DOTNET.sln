@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CONVUNI_RESTFULL_DOTNET", "CONVUNI_RESTFULL_DOTNET\CONVUNI_RESTFULL_DOTNET.csproj", "{86E15275-2F27-425D-AF70-06DC7BDEFCDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CONVUNI_RESTFULL_DOTNET_T", "CONVUNI_RESTFULL_DOTNET_T\CONVUNI_RESTFULL_DOTNET_T.csproj", "{A4BF2B0B-8DC6-46CA-9A54-589578020009}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86E15275-2F27-425D-AF70-06DC7BDEFCDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E15275-2F27-425D-AF70-06DC7BDEFCDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E15275-2F27-425D-AF70-06DC7BDEFCDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E15275-2F27-425D-AF70-06DC7BDEFCDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4BF2B0B-8DC6-46CA-9A54-589578020009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4BF2B0B-8DC6-46CA-9A54-589578020009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4BF2B0B-8DC6-46CA-9A54-589578020009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4BF2B0B-8DC6-46CA-9A54-589578020009}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38C938EE-C355-4F45-A874-CA3F4E768F62}
+	EndGlobalSection
+EndGlobal

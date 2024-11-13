@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "RsCqfaTM4iM=",
+  "success": true,
+  "projectFilePath": "Z:\\Documents\\GitHub\\RestfullServices\\RestfullDotNet\\04. CONV_UNI_RESTFULL_DOTNET_GRUPO5\\01. SERVIDOR\\WS_CONVUNI_RESTFULL_DOTNET\\WS_CONVUNI_RESTFULL_DOTNET\\WS_CONVUNI_RESTFULL_DOTNET.fsproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mathi\\.nuget\\packages\\fsharp.core\\8.0.401\\fsharp.core.8.0.401.nupkg.sha512"
+  ],
+  "logs": []
+}
