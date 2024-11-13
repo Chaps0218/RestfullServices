@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CONVUNI_RESTFULL_DOTNET_T")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7604ee249185b6a6ebe61c5dabfdf73e4cb839e7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d87d1e69e895b6b4c364a77271e8b0417598d81e")]
 [assembly: System.Reflection.AssemblyProductAttribute("CONVUNI_RESTFULL_DOTNET_T")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CONVUNI_RESTFULL_DOTNET_T")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

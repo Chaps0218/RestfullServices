@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CONVUNI_RESTFULL_DOTNET.props" />
+</Project>
