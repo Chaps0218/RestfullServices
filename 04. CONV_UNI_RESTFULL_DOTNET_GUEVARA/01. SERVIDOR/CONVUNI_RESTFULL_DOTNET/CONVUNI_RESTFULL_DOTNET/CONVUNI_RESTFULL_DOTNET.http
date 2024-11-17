@@ -1,0 +1,6 @@
+@CONVUNI_RESTFULL_DOTNET_HostAddress = http://localhost:5174
+
+GET {{CONVUNI_RESTFULL_DOTNET_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

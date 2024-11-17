@@ -1,0 +1,57 @@
+﻿@model CONVUNI_RESTFULL_DOTNET_CLIWEB.Models.ConversionRequest
+@{
+    ViewData["Title"] = "Conversión - Grupo 5";
+}
+
+<div class="convert-page">
+    <img src="https://preview.redd.it/3khigm1i5l061.jpg?auto=webp&s=59b76c49d5ac3783ede597f51acf2b7cdb3621be" alt="Blue Monster" class="sully-image">
+    <div class="conversion-form">
+        <h2>Pressure Unit Converter</h2>
+        <h2>Welcome, @ViewBag.Username!</h2>
+
+        <button id="logoutBtn" onclick="location.href='@Url.Action("Logout", "Login")'">Logout</button>
+
+        @using (Html.BeginForm("Convertir", "Conv", FormMethod.Post))
+        {
+            <div>
+                <label for="Valor">Value:</label>
+                @Html.TextBoxFor(m => m.Value, new { type = "number", required = "required" })
+            </div>
+
+            <div>
+                <label for="FromUnit">From Unit:</label>
+                @Html.DropDownListFor(m => m.FromUnit, new List<SelectListItem>
+            {
+            new SelectListItem { Text = "PA", Value = "pa" },
+            new SelectListItem { Text = "BAR", Value = "bar" },
+            new SelectListItem { Text = "mmHg", Value = "mmHg" },
+            new SelectListItem { Text = "PSI", Value = "psi" },
+            new SelectListItem { Text = "ATM", Value = "atm" }
+            })
+            </div>
+
+            <div>
+                <label for="ToUnit">To Unit:</label>
+                @Html.DropDownListFor(m => m.ToUnit, new List<SelectListItem>
+            {
+            new SelectListItem { Text = "PA", Value = "pa" },
+            new SelectListItem { Text = "BAR", Value = "bar" },
+            new SelectListItem { Text = "mmHg", Value = "mmHg" },
+            new SelectListItem { Text = "PSI", Value = "psi" },
+            new SelectListItem { Text = "ATM", Value = "atm" }
+            })
+            </div>
+
+            <button type="submit">Convert</button>
+        }
+
+        @if (!string.IsNullOrEmpty(ViewBag.Result))
+        {
+            <p id="result">@ViewBag.Result</p>
+        }
+        @if (!string.IsNullOrEmpty(ViewBag.Error))
+        {
+            <p id="result" style="color: #d32f2f;">@ViewBag.Error</p>
+        }
+    </div>
+</div>

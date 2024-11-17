@@ -1,0 +1,28 @@
+# Ignore build directories
+obj/
+bin/
+
+# Ignore PublishProfiles
+*.pubxml
+*.pubxml.user
+
+# Ignore Android build artifacts
+**/android/bin/
+**/android/obj/
+
+# Ignore machine-generated files
+**/machine.config
+**/*.Designer.cs
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.userprefs
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.temp
+
+.vs/
