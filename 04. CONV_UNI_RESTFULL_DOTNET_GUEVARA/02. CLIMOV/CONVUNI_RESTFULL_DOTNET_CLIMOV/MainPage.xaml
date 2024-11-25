@@ -2,29 +2,34 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CONVUNI_RESTFULL_DOTNET_CLIMOV.MainPage"
-             BackgroundColor="#a9def9">
+             BackgroundColor="#57afb5">
 
     <ScrollView>
         <StackLayout Padding="40,0,0,200" Spacing="25" VerticalOptions="Center" HorizontalOptions="Center">
 
             <StackLayout x:Name="LoginStack" IsVisible="True" HorizontalOptions="Center" WidthRequest="300" Spacing="10">
 
-                <Image Source="sully_2_1.png" 
-                   Aspect="AspectFit" 
-                   HeightRequest="120" 
-                   HorizontalOptions="Center" 
-                   Margin="0,0,0,20"/>
+                <Frame BackgroundColor="#d0f4de" CornerRadius="15" Padding="0" HasShadow="False" HeightRequest="180" WidthRequest="300">
+                    <Grid>
+                        <Frame BackgroundColor="Transparent" CornerRadius="15" Padding="0" IsClippedToBounds="True" HasShadow="False">
+                            <Image Source="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/12/monsters-inc-sully.jpg" 
+                               Aspect="Fill" 
+                               HorizontalOptions="FillAndExpand" 
+                               VerticalOptions="FillAndExpand" />
+                        </Frame>
+                    </Grid>
+                </Frame>
 
 
                 <Frame BackgroundColor="#d0f4de" CornerRadius="15" Padding="0" HasShadow="False" Margin="20" WidthRequest="300">
                     <StackLayout Padding="20" Spacing="20">
-                        <Label Text="Login" FontSize="30" TextColor="#7209b7" HorizontalOptions="Center"/>
-                        <Frame BackgroundColor="#c8b6ff" CornerRadius="10" Padding="5" HasShadow="False">
-                            <Entry x:Name="UsernameEntry" Placeholder="Username" TextColor="White" BackgroundColor="Transparent" PlaceholderColor="White" />
+                        <Label Text="¡Bienvenido!" FontSize="30" TextColor="#7209b7" HorizontalOptions="Center"/>
+                        <Frame BackgroundColor="#7a5c85" CornerRadius="10" Padding="5" HasShadow="False">
+                            <Entry x:Name="UsernameEntry" Placeholder="Usuario" TextColor="White" BackgroundColor="Transparent" PlaceholderColor="White" />
                         </Frame>
 
-                        <Frame BackgroundColor="#c8b6ff" CornerRadius="10" Padding="5" HasShadow="False">
-                            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" TextColor="White" BackgroundColor="Transparent" PlaceholderColor="White" />
+                        <Frame BackgroundColor="#7a5c85" CornerRadius="10" Padding="5" HasShadow="False">
+                            <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True" TextColor="White" BackgroundColor="Transparent" PlaceholderColor="White" />
                         </Frame>
 
                     </StackLayout>
@@ -32,29 +37,34 @@
 
 
 
-                <Button Text="Login" BackgroundColor="#5A8DFD" TextColor="White" Clicked="OnLoginClicked"/>
+                <Button Text="Login" BackgroundColor="#759634" TextColor="White" Clicked="OnLoginClicked"/>
             </StackLayout>
 
             <StackLayout x:Name="ConversionStack" IsVisible="False" HorizontalOptions="Center" WidthRequest="300" Spacing="15">
 
-                <Image Source="walking.png" 
-                   Aspect="AspectFit" 
-                   HeightRequest="120" 
-                   HorizontalOptions="Center" 
-                   Margin="0,20,0,20"/>
+                <Frame BackgroundColor="#d0f4de" CornerRadius="15" Padding="0" HasShadow="False" HeightRequest="180" WidthRequest="300">
+                    <Grid>
+                        <Frame BackgroundColor="Transparent" CornerRadius="15" Padding="0" IsClippedToBounds="True" HasShadow="False">
+                            <Image Source="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/12/monsters-inc-sully.jpg" 
+                               Aspect="Fill" 
+                               HorizontalOptions="FillAndExpand" 
+                               VerticalOptions="FillAndExpand" />
+                        </Frame>
+                    </Grid>
+                </Frame>
 
-                <Frame BackgroundColor="#d0f4de" CornerRadius="15" Padding="0" HasShadow="False" Margin="20" WidthRequest="300">
+                <Frame BackgroundColor="#d0f4de" CornerRadius="15" Padding="0" HasShadow="False" Margin="12" WidthRequest="300">
                     <StackLayout Padding="20" Spacing="20">
-                        <Label Text="Conversión - SOAP - Guevara" FontSize="30" TextColor="#7209b7" HorizontalOptions="Center"/>
+                        <Label Text="Conversión Restfull - Grupo 5" FontSize="30" TextColor="#7209b7" HorizontalOptions="Center"/>
 
-                        <Frame BackgroundColor="#c8b6ff" CornerRadius="10" Padding="5" HasShadow="False">
+                        <Frame BackgroundColor="#7a5c85" CornerRadius="10" Padding="5" HasShadow="False">
                             <Picker x:Name="FromUnitPicker" Title="Unidad Origen" TextColor="White"  BackgroundColor="Transparent" />
                         </Frame>
-                        <Frame BackgroundColor="#c8b6ff" CornerRadius="10" Padding="5" HasShadow="False">
+                        <Frame BackgroundColor="#7a5c85" CornerRadius="10" Padding="5" HasShadow="False">
                             <Picker x:Name="ToUnitPicker" Title="Unidad Destino" TextColor="White" BackgroundColor="Transparent" />
                         </Frame>
 
-                        <Frame BackgroundColor="#c8b6ff" CornerRadius="10" Padding="5" HasShadow="False">
+                        <Frame BackgroundColor="#7a5c85" CornerRadius="10" Padding="5" HasShadow="False">
                             <Entry x:Name="ValueEntry" Placeholder="Ingrese el valor..." TextColor="White" Keyboard="Numeric" BackgroundColor="Transparent" PlaceholderColor="White"/>
                         </Frame>
                         <Button Text="Convertir" BackgroundColor="#5A8DFD" TextColor="White" Clicked="OnConvertClicked"/>

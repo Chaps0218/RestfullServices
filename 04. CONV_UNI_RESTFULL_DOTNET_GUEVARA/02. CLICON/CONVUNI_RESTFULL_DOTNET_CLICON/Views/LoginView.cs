@@ -25,12 +25,10 @@ namespace CONVUNI_RESTFULL_DOTNET_CLICON.Views
                 int left = (Console.WindowWidth - 20) / 2;
                 int top = (Console.WindowHeight) - 8;
 
-                // Prompt for username
                 Console.SetCursorPosition(left -4, top);
                 Console.Write("Ingrese su usuario: ");
                 string username = Console.ReadLine();
 
-                // Prompt for password
                 Console.SetCursorPosition(left - 4, top + 2);
                 Console.Write("Ingrese su contraseña: ");
                 string password = ReadPassword(left - 4 + "Ingrese su contraseña: ".Length, top + 2);

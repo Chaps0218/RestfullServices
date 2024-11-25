@@ -27,11 +27,11 @@ namespace CONVUNI_RESTFULL_DOTNET_CLIMOV.Controllers
                 var responseData = response.Content.ReadAsStringAsync().Result;
                 var result = JsonConvert.DeserializeObject<ConvModel>(responseData);
 
-                return $"Converted Value: {result.resultado} {result.toUnit}";
+                return $"Valor Convertido: {result.resultado} {result.toUnit}";
             }
             else
             {
-                return "Conversion failed. Please try again.";
+                return "Conversión Fallida. Por favor, inténtelo de nuevo";
             }
         }
     }

@@ -21,7 +21,7 @@
 		<Nullable>enable</Nullable>
 
 		<!-- Display name -->
-		<ApplicationTitle>CONVUNI_RESTFULL_DOTNET_CLIMOV</ApplicationTitle>
+		<ApplicationTitle>Conversión Restfull</ApplicationTitle>
 
 		<!-- App Identifier -->
 		<ApplicationId>com.companyname.convuni_restfull_dotnet_climov</ApplicationId>

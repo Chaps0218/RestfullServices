@@ -3,23 +3,23 @@
     ViewData["Title"] = "Conversión - Grupo 5";
 }
 
+<img src="https://preview.redd.it/3khigm1i5l061.jpg?auto=webp&s=59b76c49d5ac3783ede597f51acf2b7cdb3621be" alt="Blue Monster" class="sully-image">
 <div class="convert-page">
-    <img src="https://preview.redd.it/3khigm1i5l061.jpg?auto=webp&s=59b76c49d5ac3783ede597f51acf2b7cdb3621be" alt="Blue Monster" class="sully-image">
     <div class="conversion-form">
-        <h2>Pressure Unit Converter</h2>
-        <h2>Welcome, @ViewBag.Username!</h2>
+        <h2>Conversor de Unidades de Presión - Grupo 5</h2>
+        <h2 id="usernameDisplay">¡Bienvenido, @ViewBag.Username!</h2>
 
         <button id="logoutBtn" onclick="location.href='@Url.Action("Logout", "Login")'">Logout</button>
 
-        @using (Html.BeginForm("Convertir", "Conv", FormMethod.Post))
+        @using (Html.BeginForm("Convertir", "Conv", FormMethod.Post, new { id = "conversionForm" }))
         {
             <div>
-                <label for="Valor">Value:</label>
+                <label for="Valor">Valor:</label>
                 @Html.TextBoxFor(m => m.Value, new { type = "number", required = "required" })
             </div>
 
             <div>
-                <label for="FromUnit">From Unit:</label>
+                <label for="FromUnit">Unidad de Origen:</label>
                 @Html.DropDownListFor(m => m.FromUnit, new List<SelectListItem>
             {
             new SelectListItem { Text = "PA", Value = "pa" },
@@ -31,7 +31,7 @@
             </div>
 
             <div>
-                <label for="ToUnit">To Unit:</label>
+                <label for="ToUnit">Unidad de Destino:</label>
                 @Html.DropDownListFor(m => m.ToUnit, new List<SelectListItem>
             {
             new SelectListItem { Text = "PA", Value = "pa" },
@@ -42,7 +42,7 @@
             })
             </div>
 
-            <button type="submit">Convert</button>
+            <button type="submit">Convertir</button>
         }
 
         @if (!string.IsNullOrEmpty(ViewBag.Result))
@@ -55,3 +55,15 @@
         }
     </div>
 </div>
+
+<script>
+    const username = '@ViewBag.Username';
+    if (username) {
+        localStorage.setItem('username', username);
+    }
+
+    const storedUsername = localStorage.getItem('username');
+    if (storedUsername) {
+        document.getElementById('usernameDisplay').textContent = `¡Bienvenido, ${storedUsername}!`;
+    }
+</script>

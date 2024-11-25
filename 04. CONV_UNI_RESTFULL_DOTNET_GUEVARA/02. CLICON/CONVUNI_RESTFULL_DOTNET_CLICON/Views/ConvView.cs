@@ -63,26 +63,37 @@ namespace CONVUNI_RESTFULL_DOTNET_CLICON.Views
 
             while (true)
             {
-                Console.SetCursorPosition(6, 2);
+                Console.SetCursorPosition(7, 2);
                 Console.WriteLine("Valor: ");
-                Console.SetCursorPosition(6, 4);
+
+                Console.SetCursorPosition(7, 4);
+                Console.WriteLine(new string(' ', Console.WindowWidth - 15));
+                Console.SetCursorPosition(7, 5);
+                Console.WriteLine(new string(' ', Console.WindowWidth - 15));
+
+                Console.SetCursorPosition(7, 4);
                 var value = Console.ReadLine();
                 if (!double.TryParse(value, out valueD))
                 {
-                    Console.SetCursorPosition(5, 5);
+                    Console.SetCursorPosition(7, 5);
                     Console.WriteLine("El valor ingresado no es válido");
                     await Task.Delay(2000);
-                    return;
                 }
                 else {
                     break;
                 }
             }
+
             var units = new[] { "PA", "ATM", "BAR", "PSI", "mmHg" };
             while (true) {
                 Console.SetCursorPosition(26, 2);
                 Console.WriteLine("Seleccione la Unidad de Origen:");
                 DisplayOptions(units, 4, 26);
+
+                Console.SetCursorPosition(26, 10);
+                Console.WriteLine(new string(' ', 10));
+                Console.SetCursorPosition(26, 11);
+                Console.WriteLine(new string(' ', 20));
 
                 Console.SetCursorPosition(26, 10);
                 var option1 = Console.ReadLine();
@@ -96,7 +107,6 @@ namespace CONVUNI_RESTFULL_DOTNET_CLICON.Views
                     Console.SetCursorPosition(26, 11);
                     Console.WriteLine("Opción no válida.");
                     await Task.Delay(2000);
-                    return;
                 }
             }
             
@@ -106,6 +116,11 @@ namespace CONVUNI_RESTFULL_DOTNET_CLICON.Views
                 Console.SetCursorPosition(46, 2);
                 Console.WriteLine("Seleccione la Unidad de Destino:");
                 DisplayOptions(units, 4, 46);
+
+                Console.SetCursorPosition(46, 10);
+                Console.WriteLine(new string(' ',10));
+                Console.SetCursorPosition(46, 11);
+                Console.WriteLine(new string(' ', 20));
 
                 Console.SetCursorPosition(46, 10);
                 var option2 = Console.ReadLine();
@@ -119,7 +134,6 @@ namespace CONVUNI_RESTFULL_DOTNET_CLICON.Views
                     Console.SetCursorPosition(46, 11);
                     Console.WriteLine("Opción no válida.");
                     await Task.Delay(2000);
-                    return;
                 }
             }
 

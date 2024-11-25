@@ -20,7 +20,6 @@ namespace CONVUNI_RESTFULL_DOTNET_CLIMOV
         {
             try
             {
-                // Disable the login button to prevent double clicks
                 var loginButton = sender as Button;
                 if (loginButton != null)
                     loginButton.IsEnabled = false;
@@ -30,7 +29,7 @@ namespace CONVUNI_RESTFULL_DOTNET_CLIMOV
 
                 if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
-                    await DisplayAlert("Error", "Please enter both username and password", "OK");
+                    await DisplayAlert("Error", "Por favor, ingrese tanto el usuario como la contraseña", "OK");
                     return;
                 }
 
@@ -44,7 +43,7 @@ namespace CONVUNI_RESTFULL_DOTNET_CLIMOV
 
                 if (success)
                 {
-                    await DisplayAlert("Success", "Login successful", "OK");
+                    await DisplayAlert("Éxito", "Login exitoso", "OK");
                     ToggleVisibility(isLoggedIn: true);
                 }
                 else

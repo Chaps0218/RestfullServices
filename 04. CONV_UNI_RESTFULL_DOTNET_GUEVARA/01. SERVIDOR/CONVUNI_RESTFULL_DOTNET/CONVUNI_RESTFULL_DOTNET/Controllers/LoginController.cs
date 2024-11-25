@@ -21,10 +21,10 @@ namespace CONVUNI_RESTFULL_DOTNET.Controllers
             {
                 if (user.username == login.username && user.password == login.password)
                 {
-                    return Ok(new { message = "Login successful", username = user.username });
+                    return Ok(new { message = "Login Exitoso", username = user.username });
                 }
             }
-            return Unauthorized(new { message = "Invalid username or password" });
+            return Unauthorized(new { message = "Usuario o Contraseña incorrectos" });
         }
     }
 }

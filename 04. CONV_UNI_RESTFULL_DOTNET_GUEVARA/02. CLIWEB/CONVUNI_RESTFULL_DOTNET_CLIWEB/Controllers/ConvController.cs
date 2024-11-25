@@ -32,10 +32,10 @@ namespace CONVUNI_RESTFULL_DOTNET_CLIWEB.Controllers
                 var responseData = await response.Content.ReadAsStringAsync();
                 var result = JsonConvert.DeserializeObject<ConvModel>(responseData);
 
-                ViewBag.Result = $"Converted Value: {result.resultado} {request.ToUnit}";
+                ViewBag.Result = $"Valor Convertido: {result.resultado} {request.ToUnit}";
                 return View("Index");
             }
-            ViewBag.Error = "Conversion failed. Please try again.";
+            ViewBag.Error = "Conversión fallida. Inténtelo nuevamente.";
             return View("Index");
         }
     }

@@ -8,7 +8,6 @@
     Title="CONVUNI_RESTFULL_DOTNET_CLIMOV">
 
     <ShellContent
-        Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 

@@ -62,7 +62,7 @@ namespace CONVUNI_RESTFULL_DOTNET_CLIWEB.Controllers
 
                 return RedirectToAction("Index", "Conv");
             }
-            ViewBag.Message = "Invalid username or password";
+            ViewBag.Message = "Usuario o Contraseña incorrectos";
             return View("Index");
         }
 
