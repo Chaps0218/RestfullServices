@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CONVUNI_RESTFULL_DOTNET_CLIMOV.MainPage"
-             BackgroundColor="#57afb5">
+             BackgroundImageSource="fondosully_2.png">
 
     <ScrollView>
         <StackLayout Padding="40,0,0,200" Spacing="25" VerticalOptions="Center" HorizontalOptions="Center">
@@ -45,7 +45,7 @@
                 <Frame BackgroundColor="#d0f4de" CornerRadius="15" Padding="0" HasShadow="False" HeightRequest="180" WidthRequest="300">
                     <Grid>
                         <Frame BackgroundColor="Transparent" CornerRadius="15" Padding="0" IsClippedToBounds="True" HasShadow="False">
-                            <Image Source="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/12/monsters-inc-sully.jpg" 
+                            <Image Source="https://ew.com/thmb/dcDqPAW_6x2JJmjJyBFHRYh1rfM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/110_0001-18c2e873a70e4f7abe9482241e8e6ecb.jpg" 
                                Aspect="Fill" 
                                HorizontalOptions="FillAndExpand" 
                                VerticalOptions="FillAndExpand" />
@@ -58,7 +58,7 @@
                         <Label Text="Conversión Restfull - Grupo 5" FontSize="30" TextColor="#7209b7" HorizontalOptions="Center"/>
 
                         <Frame BackgroundColor="#7a5c85" CornerRadius="10" Padding="5" HasShadow="False">
-                            <Picker x:Name="FromUnitPicker" Title="Unidad Origen" TextColor="White"  BackgroundColor="Transparent" />
+                            <Picker x:Name="FromUnitPicker" Title="Unidad Origen" TextColor="White"  BackgroundColor="Transparent"/>
                         </Frame>
                         <Frame BackgroundColor="#7a5c85" CornerRadius="10" Padding="5" HasShadow="False">
                             <Picker x:Name="ToUnitPicker" Title="Unidad Destino" TextColor="White" BackgroundColor="Transparent" />
@@ -69,7 +69,9 @@
                         </Frame>
                         <Button Text="Convertir" BackgroundColor="#5A8DFD" TextColor="White" Clicked="OnConvertClicked"/>
 
-                        <Label x:Name="ResultLabel" Text="" TextColor="#7209b7" FontSize="20" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                        <Frame BackgroundColor="#7a5c85" CornerRadius="10" Padding="5" HasShadow="False">
+                            <Label x:Name="ResultLabel" Text="" TextColor="White" FontSize="20" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                        </Frame>
 
                     </StackLayout>
 
