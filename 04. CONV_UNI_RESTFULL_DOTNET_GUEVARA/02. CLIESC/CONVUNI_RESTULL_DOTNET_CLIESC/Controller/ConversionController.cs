@@ -27,7 +27,7 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.Controller
                 var responseData = response.Content.ReadAsStringAsync().Result;
                 var result = JsonConvert.DeserializeObject<ConversionModel>(responseData);
 
-                return $"Valor Convertido: {result.resultado} {result.toUnit}";
+                return $"Valor Convertido: {Math.Round(result.resultado, 4)} {result.toUnit}";
             }
             else
             {

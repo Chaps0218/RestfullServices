@@ -11,7 +11,7 @@ namespace CONVUNI_RESTFULL_DOTNET_CLIMOV
         public MainPage()
         {
             InitializeComponent();
-            var units = new List<string> { "PA", "ATM", "BAR", "mmHg", "PSI" };
+            var units = new List<string> { "Pascal (PA)", "Atmósferas (ATM)", "BAR", "Libras por Pulgada Cuadrada (PSI)", "Milímetros de Mercurio (mmHg)"};
             FromUnitPicker.ItemsSource = units;
             ToUnitPicker.ItemsSource = units;
         }
@@ -69,8 +69,49 @@ namespace CONVUNI_RESTFULL_DOTNET_CLIMOV
                 FromUnitPicker.SelectedItem != null &&
                 ToUnitPicker.SelectedItem != null)
             {
-                string fromUnit = FromUnitPicker.SelectedItem.ToString();
-                string toUnit = ToUnitPicker.SelectedItem.ToString();
+                var fromIndex = FromUnitPicker.SelectedIndex;
+                var toIndex = ToUnitPicker.SelectedIndex;
+                string fromUnit = "";
+                string toUnit = "";
+
+                switch (fromIndex)
+                {
+                    case 0:
+                        fromUnit = "PA";
+                        break;
+                    case 1:
+                        fromUnit = "ATM";
+                        break;
+                    case 2:
+                        fromUnit = "BAR";
+                        break;
+                    case 3:
+                        fromUnit = "PSI";
+                        break;
+                    case 4:
+                        fromUnit = "mmHg";
+                        break;
+                }
+
+                switch (toIndex)
+                {
+                    case 0:
+                        toUnit = "PA";
+                        break;
+                    case 1:
+                        toUnit = "ATM";
+                        break;
+                    case 2:
+                        toUnit = "BAR";
+                        break;
+                    case 3:
+                        toUnit = "PSI";
+                        break;
+                    case 4:
+                        toUnit = "mmHg";
+                        break;
+                }
+
 
                 ConversionRequest requestModel = new()
                 {

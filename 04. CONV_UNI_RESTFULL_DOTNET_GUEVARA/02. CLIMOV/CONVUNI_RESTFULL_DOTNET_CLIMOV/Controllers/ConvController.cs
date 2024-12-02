@@ -27,7 +27,7 @@ namespace CONVUNI_RESTFULL_DOTNET_CLIMOV.Controllers
                 var responseData = response.Content.ReadAsStringAsync().Result;
                 var result = JsonConvert.DeserializeObject<ConvModel>(responseData);
 
-                return $"Valor Convertido: {result.resultado} {result.toUnit}";
+                return $"Valor Convertido: {Math.Round(result.resultado, 4)} {result.toUnit}";
             }
             else
             {
