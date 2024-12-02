@@ -50,20 +50,14 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.View
             if (isAuthenticated)
             {
                 this.Hide();
-
-                // Abrir la vista de conversión
                 Conversion conversionView = new Conversion();
                 conversionView.ShowDialog();
+                this.Close();
             }
             else
             {
                 MessageBox.Show("Usuario o contraseña incorrectos.");
             }
-        }
-
-        private void btnLogin_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

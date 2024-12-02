@@ -22,21 +22,13 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.View
             {
                 { "Pascal (PA)", "pa" },
                 { "Bar (BAR)", "bar" },
-                { "Psi (PSI)", "psi" },
+                { "Libras por Pulgada Cuadrada (PSI)", "psi" },
                 { "Atmósfera (ATM)", "atm" },
-                { "Torr (TORR)", "mmhg" }
+                { "Milímetros de Mercurio", "mmhg" }
             };
 
             comboBox1.Items.AddRange(unidades.Keys.ToArray());
             comboBox2.Items.AddRange(unidades.Keys.ToArray());
-
-            Button btnConvertir = new Button
-            {
-                Text = "Convertir",
-                Location = new Point(300, 250)
-            };
-            Controls.Add(btnConvertir);
-            btnConvertir.Click += BtnConvertir_Click;
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -44,7 +36,17 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.View
         }
         private async void BtnConvertir_Click(object sender, EventArgs e)
         {
-            await ConvertirValoresAsync();
+            if (!(comboBox1.SelectedIndex == 0 || comboBox2.SelectedIndex == 0))
+            {
+                if (!string.IsNullOrEmpty(valor.Text))
+                {
+                    await ConvertirValoresAsync();
+                }
+                else {
+                    MessageBox.Show("Holi");
+                }
+                
+            }
         }
         private async Task ConvertirValoresAsync()
         {
@@ -61,7 +63,9 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.View
             }
 
             string fromUnit = comboBox1.SelectedItem.ToString();
+            Console.WriteLine(fromUnit);
             string toUnit = comboBox2.SelectedItem.ToString();
+            Console.WriteLine(fromUnit);
 
             // Validar existencia en el diccionario
             if (!unidades.TryGetValue(fromUnit, out string fromUnitValue) ||

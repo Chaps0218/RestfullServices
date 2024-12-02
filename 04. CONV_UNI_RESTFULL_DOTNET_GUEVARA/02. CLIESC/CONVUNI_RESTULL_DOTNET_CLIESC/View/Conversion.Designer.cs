@@ -124,7 +124,7 @@
             btnConvertir.TabIndex = 8;
             btnConvertir.Text = "Convertir";
             btnConvertir.UseVisualStyleBackColor = true;
-            btnConvertir.Click += btnConvertir_Click_1;
+            btnConvertir.Click += BtnConvertir_Click;
             // 
             // pictureBox1
             // 
