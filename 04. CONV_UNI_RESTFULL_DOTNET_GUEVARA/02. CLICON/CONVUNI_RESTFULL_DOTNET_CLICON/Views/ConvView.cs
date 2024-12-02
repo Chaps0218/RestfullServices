@@ -84,7 +84,7 @@ namespace CONVUNI_RESTFULL_DOTNET_CLICON.Views
                 }
             }
 
-            var units = new[] { "PA", "ATM", "BAR", "PSI", "mmHg" };
+            var units = new[] { "Pascal (PA)", "Atmósferas (ATM)", "BAR", "Libras por Pulgada Cuadrada (PSI)", "Milímetros de Mercurio (mmHg)" };
             while (true) {
                 Console.SetCursorPosition(26, 2);
                 Console.WriteLine("Seleccione la Unidad de Origen:");
@@ -99,7 +99,23 @@ namespace CONVUNI_RESTFULL_DOTNET_CLICON.Views
                 var option1 = Console.ReadLine();
                 if (int.TryParse(option1, out int fromIndex) && fromIndex >= 1 && fromIndex <= units.Length)
                 {
-                    fromUnit = units[fromIndex - 1];
+                    switch (fromIndex) {
+                        case 1:
+                            fromUnit = "PA";
+                            break;
+                        case 2:
+                            fromUnit = "ATM";
+                            break;
+                        case 3:
+                            fromUnit = "BAR";
+                            break;
+                        case 4:
+                            fromUnit = "PSI";
+                            break;
+                        case 5:
+                            fromUnit = "mmHg";
+                            break;
+                    }
                     break;
                 }
                 else
@@ -113,25 +129,42 @@ namespace CONVUNI_RESTFULL_DOTNET_CLICON.Views
 
             while(true)
             {
-                Console.SetCursorPosition(46, 2);
+                Console.SetCursorPosition(66, 2);
                 Console.WriteLine("Seleccione la Unidad de Destino:");
-                DisplayOptions(units, 4, 46);
+                DisplayOptions(units, 4, 66);
 
-                Console.SetCursorPosition(46, 10);
+                Console.SetCursorPosition(66, 10);
                 Console.WriteLine(new string(' ',10));
-                Console.SetCursorPosition(46, 11);
+                Console.SetCursorPosition(66, 11);
                 Console.WriteLine(new string(' ', 20));
 
-                Console.SetCursorPosition(46, 10);
+                Console.SetCursorPosition(66, 10);
                 var option2 = Console.ReadLine();
                 if (int.TryParse(option2, out int toIndex) && toIndex >= 1 && toIndex <= units.Length)
                 {
-                    toUnit = units[toIndex - 1];
+                    switch (toIndex)
+                    {
+                        case 1:
+                            toUnit = "PA";
+                            break;
+                        case 2:
+                            toUnit = "ATM";
+                            break;
+                        case 3:
+                            toUnit = "BAR";
+                            break;
+                        case 4:
+                            toUnit = "PSI";
+                            break;
+                        case 5:
+                            toUnit = "mmHg";
+                            break;
+                    }
                     break;
                 }
                 else
                 {
-                    Console.SetCursorPosition(46, 11);
+                    Console.SetCursorPosition(66, 11);
                     Console.WriteLine("Opción no válida.");
                     await Task.Delay(2000);
                 }
