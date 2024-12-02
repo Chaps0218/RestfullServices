@@ -60,5 +60,10 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.View
                 MessageBox.Show("Usuario o contraseña incorrectos.");
             }
         }
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using CONVUNI_RESTULL_DOTNET_CLIESC.Model;
 
 namespace CONVUNI_RESTULL_DOTNET_CLIESC.Controller
@@ -22,7 +21,7 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.Controller
         {
             var content = new StringContent(JsonConvert.SerializeObject(modelRequest), Encoding.UTF8, "application/json");
 
-            var response = await _httpClient.PostAsync("http://10.40.28.156:780/Conv", content);
+            var response = await _httpClient.PostAsync("http://10.40.27.186:780/Conv", content);
             if (response.IsSuccessStatusCode)
             {
                 var responseData = response.Content.ReadAsStringAsync().Result;
@@ -35,5 +34,6 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.Controller
                 return "Ocurrió un error. Por favor, inténtelo de nuevo";
             }
         }
+
     }
 }

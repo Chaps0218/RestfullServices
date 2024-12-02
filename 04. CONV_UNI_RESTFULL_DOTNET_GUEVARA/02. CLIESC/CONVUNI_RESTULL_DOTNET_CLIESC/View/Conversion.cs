@@ -18,21 +18,18 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.View
             InitializeComponent();
             _convController = new ConversionController();
 
-            // Inicializamos el diccionario de unidades
             unidades = new Dictionary<string, string>
             {
-                { "Pascal (Pa)", "pa" },
-                { "Bar (bar)", "bar" },
-                { "Psi (psi)", "psi" },
-                { "Atmósfera (atm)", "atm" },
-                { "Torr (torr)", "mmhg" }
+                { "Pascal (PA)", "pa" },
+                { "Bar (BAR)", "bar" },
+                { "Psi (PSI)", "psi" },
+                { "Atmósfera (ATM)", "atm" },
+                { "Torr (TORR)", "mmhg" }
             };
 
-            // Poblar los ComboBox con las unidades legibles
             comboBox1.Items.AddRange(unidades.Keys.ToArray());
             comboBox2.Items.AddRange(unidades.Keys.ToArray());
 
-            // Crear y agregar el botón de convertir
             Button btnConvertir = new Button
             {
                 Text = "Convertir",
@@ -47,46 +44,56 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.View
         }
         private async void BtnConvertir_Click(object sender, EventArgs e)
         {
-            double value;
-            if (!double.TryParse(valor.Text, out value))
+            await ConvertirValoresAsync();
+        }
+        private async Task ConvertirValoresAsync()
+        {
+            if (string.IsNullOrEmpty(valor.Text) || !double.TryParse(valor.Text, out double parsedValue))
             {
-                MessageBox.Show("Ingrese un valor numérico válido.");
+                respuesta.Text = "Por favor, introduce un valor válido.";
                 return;
             }
 
-            // Obtener las unidades seleccionadas (en su forma legible)
-            string fromUnit = comboBox1.SelectedItem?.ToString();
-            string toUnit = comboBox2.SelectedItem?.ToString();
-
-            if (string.IsNullOrWhiteSpace(fromUnit) || string.IsNullOrWhiteSpace(toUnit))
+            if (comboBox1.SelectedItem == null || comboBox2.SelectedItem == null)
             {
-                MessageBox.Show("Por favor, seleccione las unidades de origen y destino.");
+                respuesta.Text = "Selecciona ambas unidades.";
                 return;
             }
 
-            // Convertir las unidades legibles a las formas simplificadas
-            string fromUnitSimplificado = unidades[fromUnit];
-            string toUnitSimplificado = unidades[toUnit];
+            string fromUnit = comboBox1.SelectedItem.ToString();
+            string toUnit = comboBox2.SelectedItem.ToString();
 
-            // Crear la solicitud de conversión
-            var conversionRequest = new ConversionRequest
+            // Validar existencia en el diccionario
+            if (!unidades.TryGetValue(fromUnit, out string fromUnitValue) ||
+                !unidades.TryGetValue(toUnit, out string toUnitValue))
             {
-                Value = value,
-                FromUnit = fromUnitSimplificado,
-                ToUnit = toUnitSimplificado
-            };
+                respuesta.Text = "Error al obtener las unidades seleccionadas.";
+                return;
+            }
 
-            // Realizar la conversión
-            string result = await _convController.Convertir(conversionRequest);
+            try
+            {
+                var result = await _convController.Convertir(new Model.ConversionRequest
+                {
+                    Value = parsedValue,
+                    FromUnit = fromUnitValue,
+                    ToUnit = toUnitValue
+                });
 
-            respuesta.Text = double.TryParse(result, out double resultValue)
-            ? resultValue.ToString("F2")
-            : result;
-            // Mostrar el resultado en el Label llamado "respuesta"
-            respuesta.Text = result;
+                respuesta.Text = result;
+            }
+            catch (Exception ex)
+            {
+                respuesta.Text = $"Error: {ex.Message}";
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConvertir_Click_1(object sender, EventArgs e)
         {
 
         }

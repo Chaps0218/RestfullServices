@@ -85,6 +85,7 @@
             valor.Name = "valor";
             valor.Size = new Size(229, 23);
             valor.TabIndex = 4;
+            valor.WordWrap = false;
             // 
             // label3
             // 
@@ -99,7 +100,7 @@
             // respuesta
             // 
             respuesta.AutoSize = true;
-            respuesta.Location = new Point(188, 246);
+            respuesta.Location = new Point(426, 326);
             respuesta.Name = "respuesta";
             respuesta.Size = new Size(10, 15);
             respuesta.TabIndex = 6;
@@ -109,7 +110,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(401, 48);
+            label4.Location = new Point(414, 57);
             label4.Name = "label4";
             label4.Size = new Size(269, 25);
             label4.TabIndex = 7;
@@ -123,6 +124,7 @@
             btnConvertir.TabIndex = 8;
             btnConvertir.Text = "Convertir";
             btnConvertir.UseVisualStyleBackColor = true;
+            btnConvertir.Click += btnConvertir_Click_1;
             // 
             // pictureBox1
             // 

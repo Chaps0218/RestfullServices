@@ -50,6 +50,7 @@
             btnLogin.TabIndex = 0;
             btnLogin.Text = "Iniciar Sesión";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click_1;
             // 
             // txtUser
             // 
@@ -85,6 +86,7 @@
             // 
             txtPassword.Location = new Point(183, 192);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(161, 23);
             txtPassword.TabIndex = 5;
             // 
