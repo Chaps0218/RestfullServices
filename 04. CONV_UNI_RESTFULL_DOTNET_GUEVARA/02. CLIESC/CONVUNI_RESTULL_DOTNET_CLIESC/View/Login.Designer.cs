@@ -34,38 +34,43 @@
             label2 = new Label();
             txtPassword = new MaskedTextBox();
             label3 = new Label();
-            label4 = new Label();
+            panel1 = new Panel();
             pictureBox1 = new PictureBox();
+            panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnLogin
             // 
-            btnLogin.BackColor = Color.SteelBlue;
+            btnLogin.BackColor = Color.DodgerBlue;
             btnLogin.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogin.ForeColor = Color.Black;
-            btnLogin.Location = new Point(203, 257);
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(98, 395);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(122, 39);
+            btnLogin.Size = new Size(231, 39);
             btnLogin.TabIndex = 0;
-            btnLogin.Text = "Iniciar Sesión";
+            btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
             // 
             // txtUser
             // 
-            txtUser.Location = new Point(183, 136);
+            txtUser.BorderStyle = BorderStyle.FixedSingle;
+            txtUser.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtUser.Location = new Point(98, 255);
+            txtUser.MinimumSize = new Size(20, 20);
             txtUser.Name = "txtUser";
-            txtUser.Size = new Size(161, 23);
+            txtUser.Size = new Size(231, 27);
             txtUser.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
-            label1.Location = new Point(100, 135);
+            label1.Font = new Font("Cooper Black", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.HotTrack;
+            label1.Location = new Point(98, 212);
             label1.Name = "label1";
-            label1.Size = new Size(62, 20);
+            label1.Size = new Size(94, 24);
             label1.TabIndex = 3;
             label1.Text = "Usuario";
             label1.Click += label1_Click;
@@ -74,52 +79,58 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
-            label2.Location = new Point(70, 192);
+            label2.Font = new Font("Cooper Black", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.HotTrack;
+            label2.Location = new Point(98, 297);
             label2.Name = "label2";
-            label2.Size = new Size(92, 20);
+            label2.Size = new Size(162, 27);
             label2.TabIndex = 4;
             label2.Text = "Constraseña";
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(183, 192);
+            txtPassword.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(98, 337);
+            txtPassword.MinimumSize = new Size(20, 20);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(161, 23);
+            txtPassword.Size = new Size(231, 27);
             txtPassword.TabIndex = 5;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.Indigo;
-            label3.Location = new Point(291, 37);
+            label3.Font = new Font("Cooper Black", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.InactiveCaptionText;
+            label3.Location = new Point(125, 164);
             label3.Name = "label3";
-            label3.Size = new Size(124, 25);
+            label3.Size = new Size(184, 31);
             label3.TabIndex = 6;
             label3.Text = "¡Bienvenido!";
             // 
-            // label4
+            // panel1
             // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.Transparent;
-            label4.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold);
-            label4.Location = new Point(183, 75);
-            label4.Name = "label4";
-            label4.Size = new Size(338, 20);
-            label4.TabIndex = 7;
-            label4.Text = "Para acceder, primero es necesario iniciar sesión";
+            panel1.BackColor = Color.White;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(txtPassword);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(txtUser);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(btnLogin);
+            panel1.Location = new Point(183, 22);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(427, 469);
+            panel1.TabIndex = 9;
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = Properties.Resources.boo;
-            pictureBox1.Location = new Point(421, 37);
+            pictureBox1.Location = new Point(89, 17);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(281, 315);
-            pictureBox1.TabIndex = 8;
+            pictureBox1.Size = new Size(240, 144);
+            pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
             // Login
@@ -128,20 +139,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.PaleGreen;
             BackgroundImage = Properties.Resources._2;
-            ClientSize = new Size(700, 364);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(txtPassword);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(txtUser);
-            Controls.Add(btnLogin);
-            Controls.Add(pictureBox1);
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(872, 515);
+            Controls.Add(panel1);
+            DoubleBuffered = true;
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -152,7 +160,7 @@
         private Label label2;
         private MaskedTextBox txtPassword;
         private Label label3;
-        private Label label4;
+        private Panel panel1;
         private PictureBox pictureBox1;
     }
 }
