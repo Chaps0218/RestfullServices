@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             btnLogin = new Button();
             txtUser = new TextBox();
             label1 = new Label();
@@ -128,7 +127,7 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Image = Properties.Resources.logo;
             pictureBox1.Location = new Point(-34, -53);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(497, 289);
