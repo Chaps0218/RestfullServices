@@ -16,6 +16,11 @@ namespace CONVUNI_RESTFULL_DOTNET_CLIMOV
             ToUnitPicker.ItemsSource = units;
         }
 
+        private async Task ShowCustomAlert(string title, string message)
+        {
+            await Navigation.PushModalAsync(new CustomAlert(title, message));
+        }
+
         private async void OnLoginClicked(object sender, EventArgs e)
         {
             try
@@ -29,7 +34,7 @@ namespace CONVUNI_RESTFULL_DOTNET_CLIMOV
 
                 if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
-                    await DisplayAlert("Error", "Por favor, ingrese tanto el usuario como la contraseña", "OK");
+                    await ShowCustomAlert("Error", "Por favor, ingrese tanto el usuario como la contraseña");
                     return;
                 }
 
@@ -43,17 +48,17 @@ namespace CONVUNI_RESTFULL_DOTNET_CLIMOV
 
                 if (success)
                 {
-                    await DisplayAlert("Éxito", "Login exitoso", "OK");
+                    await ShowCustomAlert("Éxito", "Login exitoso");
                     ToggleVisibility(isLoggedIn: true);
                 }
                 else
                 {
-                    await DisplayAlert("Error", "Error en el login","OK");
+                    await ShowCustomAlert("Error", "Error en el login");
                 }
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Error", ex.Message, "OK");
+                await ShowCustomAlert("Error", ex.Message);
             }
             finally
             {
@@ -125,7 +130,7 @@ namespace CONVUNI_RESTFULL_DOTNET_CLIMOV
             }
             else
             {
-                await DisplayAlert("Error", "Por favor, ingrese valores válidos.", "OK");
+                await ShowCustomAlert("Error", "Por favor, ingrese valores válidos.");
             }
         }
 

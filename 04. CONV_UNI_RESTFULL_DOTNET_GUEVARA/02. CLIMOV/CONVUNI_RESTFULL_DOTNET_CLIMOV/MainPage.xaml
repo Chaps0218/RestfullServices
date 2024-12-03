@@ -35,11 +35,12 @@
                 <Frame BackgroundColor="#d0f4de" CornerRadius="15" Padding="0" HasShadow="False" HeightRequest="180" WidthRequest="300">
                     <Grid>
                         <Frame BackgroundColor="Transparent" CornerRadius="15" Padding="0" IsClippedToBounds="True" HasShadow="False">
-                            <Image Source="https://ew.com/thmb/dcDqPAW_6x2JJmjJyBFHRYh1rfM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/110_0001-18c2e873a70e4f7abe9482241e8e6ecb.jpg" 
+                            <Image Source="sullymobile.png"
                                Aspect="Fill" 
                                HorizontalOptions="FillAndExpand" 
                                VerticalOptions="FillAndExpand" />
                         </Frame>
+
                     </Grid>
                 </Frame>
 
