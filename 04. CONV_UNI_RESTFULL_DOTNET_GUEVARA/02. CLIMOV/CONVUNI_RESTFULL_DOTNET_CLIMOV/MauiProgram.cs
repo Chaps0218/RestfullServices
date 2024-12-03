@@ -13,6 +13,9 @@ namespace CONVUNI_RESTFULL_DOTNET_CLIMOV
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Fredoka-Regular.ttf", "FredokaRegular");
+                    fonts.AddFont("Fredoka-Bold.ttf", "FredokaBold");
+                    fonts.AddFont("Fredoka-SemiBold.ttf", "FredokaSemiBold");
                 });
 
 #if DEBUG

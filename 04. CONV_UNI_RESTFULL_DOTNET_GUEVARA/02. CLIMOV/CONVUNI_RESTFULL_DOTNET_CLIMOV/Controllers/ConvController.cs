@@ -21,7 +21,7 @@ namespace CONVUNI_RESTFULL_DOTNET_CLIMOV.Controllers
         {
             var content = new StringContent(JsonConvert.SerializeObject(modelRequest), Encoding.UTF8, "application/json");
 
-            var response = await _httpClient.PostAsync("http://10.40.27.186:780/Conv", content);
+            var response = await _httpClient.PostAsync("http://192.168.18.8:780/Conv", content);
             if (response.IsSuccessStatusCode)
             {
                 var responseData = response.Content.ReadAsStringAsync().Result;

@@ -7,37 +7,27 @@
     <ScrollView>
         <StackLayout Padding="40,0,0,200" Spacing="25" VerticalOptions="Center" HorizontalOptions="Center">
 
-            <StackLayout x:Name="LoginStack" IsVisible="True" HorizontalOptions="Center" WidthRequest="300" Spacing="10">
-
-                <Frame BackgroundColor="#d0f4de" CornerRadius="15" Padding="0" HasShadow="False" HeightRequest="180" WidthRequest="300">
-                    <Grid>
-                        <Frame BackgroundColor="Transparent" CornerRadius="15" Padding="0" IsClippedToBounds="True" HasShadow="False">
-                            <Image Source="https://static1.srcdn.com/wordpress/wp-content/uploads/2022/12/monsters-inc-sully.jpg" 
-                               Aspect="Fill" 
-                               HorizontalOptions="FillAndExpand" 
-                               VerticalOptions="FillAndExpand" />
-                        </Frame>
-                    </Grid>
-                </Frame>
-
-
-                <Frame BackgroundColor="#d0f4de" CornerRadius="15" Padding="0" HasShadow="False" Margin="20" WidthRequest="300">
+            <StackLayout x:Name="LoginStack" IsVisible="True" HorizontalOptions="Center" WidthRequest="300" Spacing="10" Margin="0, 90, 0, 0">
+                <Frame BackgroundColor="#efefef" CornerRadius="15" Padding="0" HasShadow="False" Margin="20" WidthRequest="300">
                     <StackLayout Padding="20" Spacing="20">
-                        <Label Text="¡Bienvenido!" FontSize="30" TextColor="#7209b7" HorizontalOptions="Center"/>
-                        <Frame BackgroundColor="#7a5c85" CornerRadius="10" Padding="5" HasShadow="False">
-                            <Entry x:Name="UsernameEntry" Placeholder="Usuario" TextColor="White" BackgroundColor="Transparent" PlaceholderColor="White" />
+                        <Image Source="logomonster.png" 
+                           Aspect="Fill" 
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="FillAndExpand"
+                               HeightRequest="250"/>
+                        <Label Text="¡Bienvenido!" FontSize="30" TextColor="black" HorizontalOptions="Center" FontFamily="FredokaBold"/>
+                        <Frame BackgroundColor="white" CornerRadius="10" Padding="5" HasShadow="False">
+                            <Entry x:Name="UsernameEntry" Placeholder="Usuario" TextColor="black" BackgroundColor="Transparent" PlaceholderColor="black" FontFamily="FredokaRegular"/>
                         </Frame>
 
-                        <Frame BackgroundColor="#7a5c85" CornerRadius="10" Padding="5" HasShadow="False">
-                            <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True" TextColor="White" BackgroundColor="Transparent" PlaceholderColor="White" />
+                        <Frame BackgroundColor="white" CornerRadius="10" Padding="5" HasShadow="False">
+                            <Entry x:Name="PasswordEntry" Placeholder="Contraseña" IsPassword="True" TextColor="black" BackgroundColor="Transparent" PlaceholderColor="black" FontFamily="FredokaRegular"/>
                         </Frame>
 
+
+                        <Button Text="Login" BackgroundColor="#0d6efd" TextColor="White" Clicked="OnLoginClicked" FontFamily="FredokaSemiBold"/>
                     </StackLayout>
                 </Frame>
-
-
-
-                <Button Text="Login" BackgroundColor="#759634" TextColor="White" Clicked="OnLoginClicked"/>
             </StackLayout>
 
             <StackLayout x:Name="ConversionStack" IsVisible="False" HorizontalOptions="Center" WidthRequest="300" Spacing="15">
@@ -53,30 +43,32 @@
                     </Grid>
                 </Frame>
 
-                <Frame BackgroundColor="#d0f4de" CornerRadius="15" Padding="0" HasShadow="False" Margin="12" WidthRequest="300">
+                <Frame BackgroundColor="#efefef" CornerRadius="15" Padding="0" HasShadow="False" Margin="12" WidthRequest="300">
                     <StackLayout Padding="20" Spacing="20">
-                        <Label Text="Conversión Restfull - Grupo 5" FontSize="30" TextColor="#7209b7" HorizontalOptions="Center"/>
-
-                        <Frame BackgroundColor="#7a5c85" CornerRadius="10" Padding="5" HasShadow="False">
-                            <Picker x:Name="FromUnitPicker" Title="Unidad Origen" TextColor="White"  BackgroundColor="Transparent"/>
-                        </Frame>
-                        <Frame BackgroundColor="#7a5c85" CornerRadius="10" Padding="5" HasShadow="False">
-                            <Picker x:Name="ToUnitPicker" Title="Unidad Destino" TextColor="White" BackgroundColor="Transparent" />
+                        <Label Text="Conversión Restfull - Grupo 5" FontSize="30" TextColor="Black" HorizontalOptions="Center" FontFamily="FredokaBold"/>
+                        
+                        <Frame BackgroundColor="White" CornerRadius="10" Padding="5" HasShadow="False">
+                            <Entry x:Name="ValueEntry" Placeholder="Ingrese el valor..." TextColor="Black" Keyboard="Numeric" BackgroundColor="Transparent" PlaceholderColor="Black" FontFamily="FredokaRegular"/>
                         </Frame>
 
-                        <Frame BackgroundColor="#7a5c85" CornerRadius="10" Padding="5" HasShadow="False">
-                            <Entry x:Name="ValueEntry" Placeholder="Ingrese el valor..." TextColor="White" Keyboard="Numeric" BackgroundColor="Transparent" PlaceholderColor="White"/>
+                        <Frame BackgroundColor="White" CornerRadius="10" Padding="5" HasShadow="False">
+                            <Picker x:Name="FromUnitPicker" Title="Unidad Origen" TextColor="Black"  BackgroundColor="Transparent" FontFamily="FredokaRegular"/>
                         </Frame>
-                        <Button Text="Convertir" BackgroundColor="#5A8DFD" TextColor="White" Clicked="OnConvertClicked"/>
+
+                        <Frame BackgroundColor="White" CornerRadius="10" Padding="5" HasShadow="False">
+                            <Picker x:Name="ToUnitPicker" Title="Unidad Destino" TextColor="Black" BackgroundColor="Transparent" FontFamily="FredokaRegular"/>
+                        </Frame>
+
+                        <Button Text="Convertir" BackgroundColor="#7a1fa2" TextColor="White" Clicked="OnConvertClicked" FontFamily="FredokaSemiBold"/>
 
                         <Frame BackgroundColor="#7a5c85" CornerRadius="10" Padding="5" HasShadow="False">
-                            <Label x:Name="ResultLabel" Text="" TextColor="White" FontSize="20" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                            <Label x:Name="ResultLabel" Text="" TextColor="White" FontSize="20" HorizontalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontFamily="FredokaSemiBold"/>
                         </Frame>
 
                     </StackLayout>
 
                 </Frame>
-                <Button Text="Logout" BackgroundColor="#FF6347" TextColor="White" Clicked="OnBackToLoginClicked"/>
+                <Button Text="Logout" BackgroundColor="#7a1fa2" TextColor="White" Clicked="OnBackToLoginClicked" FontFamily="FredokaSemiBold"/>
             </StackLayout>
 
         </StackLayout>

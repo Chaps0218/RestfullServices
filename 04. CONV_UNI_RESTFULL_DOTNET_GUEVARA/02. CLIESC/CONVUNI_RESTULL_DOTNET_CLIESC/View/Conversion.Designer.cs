@@ -37,8 +37,6 @@
             respuesta = new Label();
             label4 = new Label();
             btnConvertir = new Button();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // comboBox1
@@ -132,22 +130,12 @@
             btnConvertir.UseVisualStyleBackColor = false;
             btnConvertir.Click += BtnConvertir_Click;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.sulley2;
-            pictureBox1.Location = new Point(48, 58);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(309, 319);
-            pictureBox1.TabIndex = 9;
-            pictureBox1.TabStop = false;
-            // 
             // Conversion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumPurple;
             ClientSize = new Size(711, 409);
-            Controls.Add(pictureBox1);
             Controls.Add(btnConvertir);
             Controls.Add(label4);
             Controls.Add(respuesta);
@@ -159,7 +147,6 @@
             Controls.Add(comboBox1);
             Name = "Conversion";
             Text = "Conversion";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -175,6 +162,5 @@
         private Label respuesta;
         private Label label4;
         private Button btnConvertir;
-        private PictureBox pictureBox1;
     }
 }
