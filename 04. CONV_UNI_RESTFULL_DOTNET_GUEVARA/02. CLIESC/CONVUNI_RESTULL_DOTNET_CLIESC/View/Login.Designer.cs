@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             btnLogin = new Button();
             txtUser = new TextBox();
             label1 = new Label();
@@ -113,13 +114,13 @@
             // 
             panel1.BackColor = Color.White;
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(txtPassword);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(txtUser);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(btnLogin);
+            panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(183, 22);
             panel1.Name = "panel1";
             panel1.Size = new Size(427, 469);
@@ -127,9 +128,11 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(89, 17);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(-34, -53);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(240, 144);
+            pictureBox1.Size = new Size(497, 289);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
