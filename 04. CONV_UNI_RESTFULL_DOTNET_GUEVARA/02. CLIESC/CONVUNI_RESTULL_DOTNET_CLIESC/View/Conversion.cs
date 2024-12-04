@@ -24,7 +24,7 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.View
                 { "Bar (BAR)", "bar" },
                 { "Libras por Pulgada Cuadrada (PSI)", "psi" },
                 { "Atmósfera (ATM)", "atm" },
-                { "Milímetros de Mercurio", "mmhg" }
+                { "Milímetros de Mercurio (mmHg)", "mmhg" }
             };
 
             comboBox1.Items.AddRange(unidades.Keys.ToArray());
@@ -40,7 +40,7 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.View
         }
         private async void BtnConvertir_Click(object sender, EventArgs e)
         {
-            if (!(comboBox1.SelectedIndex == 0 || comboBox2.SelectedIndex == 0))
+            if (!(comboBox1.SelectedIndex == -1 || comboBox2.SelectedIndex == -1))
             {
                 if (!string.IsNullOrEmpty(valor.Text))
                 {
@@ -68,9 +68,7 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.View
             }
 
             string fromUnit = comboBox1.SelectedItem.ToString();
-            Console.WriteLine(fromUnit);
             string toUnit = comboBox2.SelectedItem.ToString();
-            Console.WriteLine(fromUnit);
 
             // Validar existencia en el diccionario
             if (!unidades.TryGetValue(fromUnit, out string fromUnitValue) ||
