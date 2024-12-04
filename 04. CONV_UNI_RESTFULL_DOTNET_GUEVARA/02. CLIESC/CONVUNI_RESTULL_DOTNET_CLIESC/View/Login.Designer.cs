@@ -43,7 +43,7 @@
             // btnLogin
             // 
             btnLogin.BackColor = Color.DodgerBlue;
-            btnLogin.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogin.Font = new Font("Berlin Sans FB Demi", 20.25F, FontStyle.Bold);
             btnLogin.ForeColor = Color.White;
             btnLogin.Location = new Point(98, 395);
             btnLogin.Name = "btnLogin";
@@ -55,22 +55,22 @@
             // txtUser
             // 
             txtUser.BorderStyle = BorderStyle.FixedSingle;
-            txtUser.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtUser.Font = new Font("Berlin Sans FB", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtUser.Location = new Point(98, 255);
             txtUser.MinimumSize = new Size(20, 20);
             txtUser.Name = "txtUser";
-            txtUser.Size = new Size(231, 27);
+            txtUser.Size = new Size(231, 37);
             txtUser.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Cooper Black", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Berlin Sans FB Demi", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.HotTrack;
             label1.Location = new Point(98, 212);
             label1.Name = "label1";
-            label1.Size = new Size(94, 24);
+            label1.Size = new Size(105, 31);
             label1.TabIndex = 3;
             label1.Text = "Usuario";
             label1.Click += label1_Click;
@@ -79,33 +79,34 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Cooper Black", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Berlin Sans FB Demi", 20.25F, FontStyle.Bold);
             label2.ForeColor = SystemColors.HotTrack;
-            label2.Location = new Point(98, 297);
+            label2.Location = new Point(89, 303);
             label2.Name = "label2";
-            label2.Size = new Size(162, 27);
+            label2.Size = new Size(161, 31);
             label2.TabIndex = 4;
             label2.Text = "Constraseña";
             // 
             // txtPassword
             // 
-            txtPassword.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(98, 337);
+            txtPassword.BorderStyle = BorderStyle.FixedSingle;
+            txtPassword.Font = new Font("Berlin Sans FB", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPassword.Location = new Point(98, 348);
             txtPassword.MinimumSize = new Size(20, 20);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(231, 27);
+            txtPassword.Size = new Size(231, 37);
             txtPassword.TabIndex = 5;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Cooper Black", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Berlin Sans FB", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.InactiveCaptionText;
-            label3.Location = new Point(125, 164);
+            label3.Location = new Point(98, 154);
             label3.Name = "label3";
-            label3.Size = new Size(184, 31);
+            label3.Size = new Size(228, 44);
             label3.TabIndex = 6;
             label3.Text = "¡Bienvenido!";
             // 
@@ -128,7 +129,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.logo;
-            pictureBox1.Location = new Point(-34, -53);
+            pictureBox1.Location = new Point(-36, -60);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(497, 289);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;

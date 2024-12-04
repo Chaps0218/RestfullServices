@@ -48,31 +48,31 @@
             // 
             // comboBox1
             // 
-            comboBox1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox1.Font = new Font("Berlin Sans FB", 15.75F);
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(67, 241);
+            comboBox1.Location = new Point(63, 259);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(283, 28);
+            comboBox1.Size = new Size(373, 31);
             comboBox1.TabIndex = 0;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // comboBox2
             // 
-            comboBox2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox2.Font = new Font("Berlin Sans FB", 15.75F);
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(67, 310);
+            comboBox2.Location = new Point(66, 346);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(283, 28);
+            comboBox2.Size = new Size(370, 31);
             comboBox2.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Britannic Bold", 14.25F);
+            label1.Font = new Font("Berlin Sans FB Demi", 15.75F, FontStyle.Bold);
             label1.ForeColor = Color.Teal;
-            label1.Location = new Point(63, 211);
+            label1.Location = new Point(63, 222);
             label1.Name = "label1";
-            label1.Size = new Size(154, 21);
+            label1.Size = new Size(178, 24);
             label1.TabIndex = 2;
             label1.Text = "Unidad de Origen";
             label1.Click += label1_Click;
@@ -80,53 +80,53 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Britannic Bold", 14.25F);
+            label2.Font = new Font("Berlin Sans FB Demi", 15.75F, FontStyle.Bold);
             label2.ForeColor = Color.Teal;
-            label2.Location = new Point(63, 282);
+            label2.Location = new Point(63, 302);
             label2.Name = "label2";
-            label2.Size = new Size(161, 21);
+            label2.Size = new Size(185, 24);
             label2.TabIndex = 3;
             label2.Text = "Unidad de Destino";
             // 
             // valor
             // 
-            valor.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            valor.Location = new Point(66, 171);
+            valor.Font = new Font("Berlin Sans FB", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            valor.Location = new Point(63, 188);
             valor.Name = "valor";
-            valor.Size = new Size(283, 27);
+            valor.Size = new Size(373, 31);
             valor.TabIndex = 4;
             valor.WordWrap = false;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Britannic Bold", 14.25F);
+            label3.Font = new Font("Berlin Sans FB Demi", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Teal;
-            label3.Location = new Point(66, 147);
+            label3.Location = new Point(66, 152);
             label3.Name = "label3";
-            label3.Size = new Size(58, 21);
+            label3.Size = new Size(67, 24);
             label3.TabIndex = 5;
             label3.Text = "Valor:";
             // 
             // respuesta
             // 
             respuesta.AutoSize = true;
-            respuesta.Font = new Font("Britannic Bold", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            respuesta.Font = new Font("Berlin Sans FB Demi", 15.75F, FontStyle.Bold);
             respuesta.ForeColor = Color.Teal;
-            respuesta.Location = new Point(202, 396);
+            respuesta.Location = new Point(66, 436);
             respuesta.Name = "respuesta";
-            respuesta.Size = new Size(15, 21);
+            respuesta.Size = new Size(16, 24);
             respuesta.TabIndex = 6;
             respuesta.Text = ".";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Britannic Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Berlin Sans FB", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Teal;
-            label4.Location = new Point(44, 18);
+            label4.Location = new Point(71, 20);
             label4.Name = "label4";
-            label4.Size = new Size(342, 46);
+            label4.Size = new Size(365, 52);
             label4.TabIndex = 7;
             label4.Text = "Conversor de Unidades de Presión - \r\nGrupo 5";
             label4.TextAlign = ContentAlignment.MiddleCenter;
@@ -134,11 +134,11 @@
             // btnConvertir
             // 
             btnConvertir.BackColor = Color.MediumPurple;
-            btnConvertir.Font = new Font("Britannic Bold", 12F);
+            btnConvertir.Font = new Font("Berlin Sans FB Demi", 15.75F, FontStyle.Bold);
             btnConvertir.ForeColor = Color.White;
-            btnConvertir.Location = new Point(66, 354);
+            btnConvertir.Location = new Point(63, 394);
             btnConvertir.Name = "btnConvertir";
-            btnConvertir.Size = new Size(287, 30);
+            btnConvertir.Size = new Size(373, 39);
             btnConvertir.TabIndex = 8;
             btnConvertir.Text = "Convertir";
             btnConvertir.UseVisualStyleBackColor = false;
@@ -158,19 +158,19 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label2);
-            panel1.Location = new Point(162, 178);
+            panel1.Location = new Point(162, 211);
             panel1.Name = "panel1";
-            panel1.Size = new Size(426, 432);
+            panel1.Size = new Size(516, 475);
             panel1.TabIndex = 9;
             // 
             // bienvenido
             // 
             bienvenido.AutoSize = true;
-            bienvenido.Font = new Font("Britannic Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            bienvenido.Font = new Font("Berlin Sans FB Demi", 15.75F, FontStyle.Bold);
             bienvenido.ForeColor = Color.Teal;
-            bienvenido.Location = new Point(198, 72);
+            bienvenido.Location = new Point(141, 72);
             bienvenido.Name = "bienvenido";
-            bienvenido.Size = new Size(16, 23);
+            bienvenido.Size = new Size(16, 24);
             bienvenido.TabIndex = 10;
             bienvenido.Text = ".";
             bienvenido.TextAlign = ContentAlignment.MiddleCenter;
@@ -178,11 +178,11 @@
             // btn_logout
             // 
             btn_logout.BackColor = Color.MediumPurple;
-            btn_logout.Font = new Font("Britannic Bold", 12F);
+            btn_logout.Font = new Font("Berlin Sans FB Demi", 15.75F, FontStyle.Bold);
             btn_logout.ForeColor = Color.White;
-            btn_logout.Location = new Point(67, 103);
+            btn_logout.Location = new Point(63, 108);
             btn_logout.Name = "btn_logout";
-            btn_logout.Size = new Size(287, 30);
+            btn_logout.Size = new Size(373, 41);
             btn_logout.TabIndex = 9;
             btn_logout.Text = "Logout";
             btn_logout.UseVisualStyleBackColor = false;
@@ -191,9 +191,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(197, 12);
+            pictureBox1.Location = new Point(181, 12);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(365, 160);
+            pictureBox1.Size = new Size(391, 193);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
@@ -204,7 +204,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MediumPurple;
             BackgroundImage = Properties.Resources._2;
-            ClientSize = new Size(759, 622);
+            ClientSize = new Size(896, 698);
             Controls.Add(pictureBox1);
             Controls.Add(panel1);
             Name = "Conversion";
