@@ -34,6 +34,10 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.View
         {
 
         }
+        public void bienvenida(string nombre)
+        {
+            bienvenido.Text = $"¡Bienvenido, {nombre}!";
+        }
         private async void BtnConvertir_Click(object sender, EventArgs e)
         {
             if (!(comboBox1.SelectedIndex == 0 || comboBox2.SelectedIndex == 0))
@@ -42,10 +46,11 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.View
                 {
                     await ConvertirValoresAsync();
                 }
-                else {
+                else
+                {
                     MessageBox.Show("Holi");
                 }
-                
+
             }
         }
         private async Task ConvertirValoresAsync()
@@ -100,6 +105,14 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.View
         private void btnConvertir_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login loginView = new Login();
+            loginView.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -51,6 +51,7 @@ namespace CONVUNI_RESTULL_DOTNET_CLIESC.View
             {
                 this.Hide();
                 Conversion conversionView = new Conversion();
+                conversionView.bienvenida(username);
                 conversionView.ShowDialog();
                 this.Close();
             }
